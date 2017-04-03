@@ -1,0 +1,25 @@
+---
+declared-services:
+  wcm-conversation:
+    label: conversation
+    plan: free
+  wcm-cloudant:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+- name: Meezanbot
+  memory: 1024M
+  instances: 1
+  host: Meezanbot
+  services:
+    - wcm-conversation
+    - wcm-cloudant
+  env:
+    MESSENGER_APP_SECRET: eb6636bef1e6d6ffec9224a52db3dd00
+    MESSENGER_PAGE_TOKEN: EAARzt1ZBrpOQBANbsr65ZCqjjYJp7JWMC6WKKU9MSVPNIvTyWFnYXPrmzezSKLuh5rTGpSuXAsyZAZAkN4mYPnZB8XCMC5THeYbkcmdSUoThHWnzMy1WDwaAU4aIBNSee4WJDGMZCNyH5kWJZCI1UX3QteQ3oi2TUjJG47sBBqGsgZDZD
+    MESSENGER_VERIFY_TOKEN: password
+    MESSENGER_WEBHOOKENDPOINT: /webhook
+    TELEGRAM_AUTH_TOKEN: UNDEFINED
+    TELEGRAM_WEBHOOKENDPOINT: UNDEFINED
+    --- WORKSPACE_ID: e2a986ca-564c-469b-a039-c5d4446c08bf
+    WORKSPACE_ID: e2a986ca-564c-469b-a039-c5d4446c08bf
